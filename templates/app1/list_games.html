@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="icon" href="{% static 'images.png' %}"> 
+<link rel="stylesheet" href="{% static 'styles.css' %}"> 
+
+{% block content %}
+
+<h1>All Games</h1> 
+
+<table> 
+    <tr> 
+        <th>game title</th> 
+        <th>developer</th> 
+    </tr> 
+ 
+    {% for game in games %} 
+    <tr> 
+        <td> 
+            <a>{{ game.title }}</a> 
+        </td> 
+        <td>{{ game.developer }}</td> 
+    </tr> 
+    {% endfor %} 
+ 
+</table> 
+
+{% endblock content %} 
+
+
+ 
